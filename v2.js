@@ -181,4 +181,22 @@
 
     }
     window.app.run();
+
+    // 防止鼠标移出页面后视频自动暂停
+    document.onmouseleave = e => {
+        e.stopPropagation();
+        e.preventDefault();
+    };
+    window.onmouseleave = e => {
+        e.stopPropagation();
+        e.preventDefault();
+    };
+    document.onmouseout = e => {
+        e.stopPropagation();
+        e.preventDefault();
+    };
+    window.onmouseout = e => {
+        e.stopPropagation();
+        e.preventDefault();
+    };
 })();
